@@ -6,17 +6,22 @@
 //
 
 import SwiftUI
+import ARKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        ARViewContainer().edgesIgnoringSafeArea(.all)
     }
+}
+
+struct ARViewContainer: UIViewRepresentable {
+    func makeUIView(context: Context) -> ARSCNView {
+        let arView = ARSCNView()
+        arView.session.run(ARWorldTrackingConfiguration())
+        return arView
+    }
+
+    func updateUIView(_ uiView: ARSCNView, context: Context) {}
 }
 
 #Preview {

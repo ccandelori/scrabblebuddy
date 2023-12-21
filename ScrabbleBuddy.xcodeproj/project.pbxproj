@@ -11,6 +11,9 @@
 		10386EED2B34C10700355D03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10386EEC2B34C10700355D03 /* ContentView.swift */; };
 		10386EEF2B34C10900355D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10386EEE2B34C10900355D03 /* Assets.xcassets */; };
 		10386EF22B34C10900355D03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10386EF12B34C10900355D03 /* Preview Assets.xcassets */; };
+		10386EFB2B34C17F00355D03 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10386EFA2B34C17F00355D03 /* ARKit.framework */; };
+		10386EFD2B34C19100355D03 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10386EFC2B34C19100355D03 /* Vision.framework */; };
+		10386EFF2B34C19A00355D03 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10386EFE2B34C19A00355D03 /* CoreML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		10386EEC2B34C10700355D03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		10386EEE2B34C10900355D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10386EF12B34C10900355D03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10386EF82B34C16900355D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		10386EFA2B34C17F00355D03 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		10386EFC2B34C19100355D03 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		10386EFE2B34C19A00355D03 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10386EFD2B34C19100355D03 /* Vision.framework in Frameworks */,
+				10386EFB2B34C17F00355D03 /* ARKit.framework in Frameworks */,
+				10386EFF2B34C19A00355D03 /* CoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +47,7 @@
 			children = (
 				10386EE92B34C10700355D03 /* ScrabbleBuddy */,
 				10386EE82B34C10700355D03 /* Products */,
+				10386EF92B34C17F00355D03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +62,7 @@
 		10386EE92B34C10700355D03 /* ScrabbleBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				10386EF82B34C16900355D03 /* Info.plist */,
 				10386EEA2B34C10700355D03 /* ScrabbleBuddyApp.swift */,
 				10386EEC2B34C10700355D03 /* ContentView.swift */,
 				10386EEE2B34C10900355D03 /* Assets.xcassets */,
@@ -65,6 +77,16 @@
 				10386EF12B34C10900355D03 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10386EF92B34C17F00355D03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10386EFE2B34C19A00355D03 /* CoreML.framework */,
+				10386EFC2B34C19100355D03 /* Vision.framework */,
+				10386EFA2B34C17F00355D03 /* ARKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +297,13 @@
 				DEVELOPMENT_TEAM = 75DE4KA4WT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScrabbleBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +328,13 @@
 				DEVELOPMENT_TEAM = 75DE4KA4WT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScrabbleBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
